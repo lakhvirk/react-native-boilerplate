@@ -1,4 +1,4 @@
-const {green, blue} = require('kleur');
+const { green, blue } = require('kleur');
 
 module.exports = {
   async apply() {

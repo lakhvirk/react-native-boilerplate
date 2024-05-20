@@ -1,14 +1,25 @@
-import React from 'react';
-import {SafeAreaView, StatusBar, Text, useColorScheme} from 'react-native';
+import 'react-native-gesture-handler';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { PersistGate } from 'redux-persist/integration/react';
+import { Provider } from 'react-redux';
+import ThemeProvider from '@/theme/ThemeProvider';
+import ApplicationNavigator from '@/navigators/Application';
+import './translations';
+import store, { persistor } from './store';
 
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+const queryClient = new QueryClient();
 
+function App() {
   return (
-    <SafeAreaView>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <Text>Lakhwinder Singh Virk</Text>
-    </SafeAreaView>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <QueryClientProvider client={queryClient}>
+          <ThemeProvider>
+            <ApplicationNavigator />
+          </ThemeProvider>
+        </QueryClientProvider>
+      </PersistGate>
+    </Provider>
   );
 }
 

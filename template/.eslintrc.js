@@ -1,9 +1,12 @@
 module.exports = {
   root: true,
-  extends: [
-    '@react-native',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
-  ],
+  env: {
+    'jest/globals': true,
+  },
+  extends: ['@react-native'],
   parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint/eslint-plugin'],
+  rules: {
+    'react/react-in-jsx-scope': 'off',
+  },
 };

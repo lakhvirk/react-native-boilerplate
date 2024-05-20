@@ -21,11 +21,11 @@ const plugins = [printSuccessPlugin];
 async function applyPlugin(name, plugin, response) {
   if (!plugin.promptsOptions) {
     await plugin.apply(null, response);
-    return {[name]: null, ...response};
+    return { [name]: null, ...response };
   }
-  const {value} = await prompts({...plugin.promptsOptions, name: 'value'});
+  const { value } = await prompts({ ...plugin.promptsOptions, name: 'value' });
   await plugin.apply(value, response);
-  return {[name]: value, ...response};
+  return { [name]: value, ...response };
 }
 
 module.exports = {
@@ -35,7 +35,7 @@ module.exports = {
    */
   async applyPlugins() {
     return plugins.reduce(
-      (acc, {name, ...plugin}) =>
+      (acc, { name, ...plugin }) =>
         acc.then(response => applyPlugin(name, plugin, response)),
       Promise.resolve({}),
     );
