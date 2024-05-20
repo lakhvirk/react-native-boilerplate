@@ -3,6 +3,5 @@ const {apply} = require('./plugin');
 
 module.exports = {
   name: 'printSuccess',
-  promptsOptions,
   apply,
 };
