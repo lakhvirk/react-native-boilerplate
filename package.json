@@ -1,39 +1,38 @@
 {
-  "name": "Boilerplate",
-  "version": "0.0.1",
-  "private": true,
+  "name": "@lakhvirk/react-native-boilerplate",
+  "version": "0.0.1-rc3",
+  "description": "LakhVirk React Native Boilerplate",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lakhvirk/react-native-boilerplate.git"
+  },
+  "author": "Lakhwinder Singh Virk Lyon <lakhwinder.virk4@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lakhvirk/react-native-boilerplate/issues"
+  },
+  "homepage": "https://rehmatsoftsolutions.com/",
+  "main": "post-init.script.js",
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "lint": "eslint .",
-    "start": "react-native start",
-    "test": "jest",
-    "pod-install": "cd ios && RCT_NEW_ARCH_ENABLED=1 bundle exec pod install && cd .."
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "react",
+    "native",
+    "boilerplate",
+    "lakhvirk",
+    "lakhwinder singh virk",
+    "react-native-boilerplate",
+    "lakhvirk-react-native-boilerplate",
+    "lakhwinder",
+    "singh",
+    "virk",
+    "react-native",
+    "starter-kit"
+  ],
   "dependencies": {
-    "react": "18.2.0",
-    "react-native": "0.74.1"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.20.0",
-    "@babel/preset-env": "^7.20.0",
-    "@babel/runtime": "^7.20.0",
-    "@react-native/babel-preset": "0.74.83",
-    "@react-native/eslint-config": "0.74.83",
-    "@react-native/metro-config": "0.74.83",
-    "@react-native/typescript-config": "0.74.83",
-    "@types/react": "^18.2.6",
-    "@types/react-test-renderer": "^18.0.0",
-    "babel-jest": "^29.6.3",
-    "eslint": "^8.19.0",
-    "jest": "^29.6.3",
-    "prettier": "2.8.8",
-    "react-test-renderer": "18.2.0",
-    "reactotron-react-native": "^5.1.7",
-    "typescript": "5.0.4"
-  },
-  "engines": {
-    "node": ">=18"
+    "kleur": "^4.1.4",
+    "prompts": "^2.4.1"
   },
   "packageManager": "yarn@3.6.4"
 }
